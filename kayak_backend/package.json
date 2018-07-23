@@ -1,0 +1,34 @@
+{
+  "name": "kayak-prototype-schema",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2",
+    "morgan": "~1.8.1",
+    "pug": "2.0.0-beta11",
+    "bcrypt": "^1.0.3",
+    "body-parser": "~1.17.1",
+    "cors": "^2.8.4",
+    "ejs": "~2.5.6",
+    "jsonwebtoken": "^8.1.0",
+    "kafka-node": "^2.2.3",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "serve-favicon": "~2.4.2",
+    "chai": "^4.1.2",
+    "chai-http": "^3.0.0",
+    "mocha": "^4.0.1",
+    "supertest": "^3.0.0",
+    "mysql": "*",
+    "express-validator": "*",
+    "fs": "0.0.1-security",
+    "mongodb": "^2.2.33",
+    "mongoose": "^4.13.2"
+  }
+}
