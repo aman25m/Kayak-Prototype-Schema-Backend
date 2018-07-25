@@ -1,0 +1,9 @@
+{
+  "name": "kafka_backend",
+  "version": "0.0.1",
+  "dependencies": {
+    "nodemailer": "*",
+    "kafka-node": "^2.2.3",
+    "mysql": "*"
+  }
+}

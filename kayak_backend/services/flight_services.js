@@ -39,7 +39,7 @@ exports.addFlight = function(data, callback){
 
 exports.bookFlight = function(data, callback){
     Flights.bookNewFlight( data , function(err , results){
-        console.log("its booknewflight in flight_services"+flightbookingDetail.user_id);
+        console.log("its booknewflight in flight_services"+data.user_id);
         if(err){
             callback(err, null);
         }else{

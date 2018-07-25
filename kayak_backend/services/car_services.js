@@ -1,6 +1,6 @@
 var Cars = require('../models/cars');
 var UserTrace = require('../models/user_trace');
-
+var kafka = require('./../kafka/kafka-connection');
 
 
 
@@ -71,6 +71,21 @@ exports.bookCar = function(data, callback){
                 UserTrace.addUserActivity(data.user_id,"book car");
             }
             callback(null,results);
+            
+            var carBookingMail = kafka.getProducer();
+            carBookingMail.on('ready', function(){
+                console.log('Producer is ready');
+                let message = JSON.stringify(data);
+                let payload = [{topic:"carBookingMail", messages: message, partition:0}];
+                carBookingMail.send(payload, function(err, result){
+                    if(err){
+                        console.log("Error sending email");
+                    }else{
+                        console.log("Mail sent successfully");
+                    }
+                });
+            });
+
         }
     });
 };

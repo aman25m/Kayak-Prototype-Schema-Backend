@@ -29,6 +29,7 @@
     "express-validator": "*",
     "fs": "0.0.1-security",
     "mongodb": "^2.2.33",
-    "mongoose": "^4.13.2"
+    "mongoose": "^4.13.2",
+    "nodemailer": "*"
   }
 }

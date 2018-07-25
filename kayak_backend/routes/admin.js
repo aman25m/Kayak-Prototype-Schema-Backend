@@ -188,7 +188,7 @@ router.post('/updateflightadmin', function(req, res, next) {
 router.post('/admincarbilling', function(req, res, next) {
 
     if(req.body.date || req.body.month){
-        adminServices.adminCarBilling({date : req.body.date, month:}, function(err,result){
+        adminServices.adminCarBilling({date : req.body.date, month:req.body.month}, function(err,result){
             if(err){
                 console.log(err);
                 res.status(403).json({result:[],message:err});
@@ -206,7 +206,7 @@ router.post('/admincarbilling', function(req, res, next) {
 router.post('/adminflightbilling', function(req, res, next) {
 
     if(req.body.date || req.body.month){
-        adminServices.adminflightBilling({date : req.body.date, month:}, function(err,result){
+        adminServices.adminFlightBilling({date : req.body.date, month:req.body.month}, function(err,result){
             if(err){
                 console.log(err);
                 res.status(403).json({result:[],message:err});
